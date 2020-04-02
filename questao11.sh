@@ -1,0 +1,1 @@
+echo $(ps | grep node)
