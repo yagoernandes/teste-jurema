@@ -1,0 +1,15 @@
+version: "3"
+services:
+  node:
+    build: questao1/
+    ports:
+      - "8080:3001"
+    links:
+      - db
+  db:
+    image: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_PASSWORD: supersecret
+    
